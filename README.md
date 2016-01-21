@@ -63,6 +63,8 @@ $ randomcat gif /users/tor/cat.gif
 
 The two arguments _format_ and _file_ are optional.
 
+You can select the formats _png_, _jpg_ or _gif_.
+
 The command return the filename/absolute path of the image to the standard output (stdout).
 
 ### Licence
