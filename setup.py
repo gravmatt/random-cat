@@ -25,7 +25,6 @@ setup(
     author_email = 'gravmatt@gmail.com',
     keywords = 'cat kitten hacking hack fun',
     packages = find_packages(),
-    install_requires = ['setuptools'],
     entry_points="""
     [console_scripts]
     randomcat = cat:main

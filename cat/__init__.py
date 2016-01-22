@@ -8,7 +8,7 @@ cat is a amazing modul to get cat images. This Project won't be
 posible without the great Cat API (http://thecatapi.com).
 Big thanks!
 
-Project on github https://github.com/gravmatt/py-random-kitten
+Project on github https://github.com/gravmatt/random-cat
 """
 
 import urllib, uuid, os, sys
