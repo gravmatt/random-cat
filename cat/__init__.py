@@ -38,5 +38,5 @@ def main():
         filename = os.path.basename(filename).split('.')[0]
     sys.stdout.write(getCat(directory, filename, format))
 
-if(__name__ == '__main__'):
+if __name__ == '__main__':
     main()
