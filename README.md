@@ -9,6 +9,8 @@ Go and visit [http://thecatapi.com](http://thecatapi.com)
 
 ![alt text](http://thecatapi.com/api/images/get?type=gif "See? amazing!")
 
+**Python 2 and 3 compatible**
+
 ## Installation
 
 Install through **pip**.

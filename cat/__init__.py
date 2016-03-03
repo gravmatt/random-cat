@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 """
 Copyright (c) 2016, René Tanczos <gravmatt@gmail.com> (Twitter @gravmatt)
 The MIT License (MIT)
@@ -11,15 +12,33 @@ Big thanks!
 Project on github https://github.com/gravmatt/random-cat
 """
 
-import urllib, uuid, os, sys
 
-url = 'http://thecatapi.com/api/images/get'
+__author__ = 'René Tanczos'
+__version__ = '1.0.1'
+__license__ = 'MIT'
+
+
+import uuid
+import os
+import sys
+
+download = None
+try:
+    import urllib
+    download = urllib.urlretrieve
+except:
+    import urllib.request
+    download = urllib.request.urlretrieve
+
+
+url = 'https://thecatapi.com/api/images/get'
+
 
 def getCat(directory=None, filename=None, format='png'):
     basename = '%s.%s' % (filename if filename else str(uuid.uuid4()), format)
     savefile =  os.path.sep.join([directory.rstrip(os.path.sep), basename]) if directory else basename
     downloadlink = url + '?type=%s' % format
-    urllib.urlretrieve(downloadlink, savefile)
+    download(downloadlink, savefile)
     return savefile
 
 
@@ -37,6 +56,7 @@ def main():
         directory = os.path.sep.join(filename.split(os.path.sep)[:-1])
         filename = os.path.basename(filename).split('.')[0]
     sys.stdout.write(getCat(directory, filename, format))
+
 
 if __name__ == '__main__':
     main()

@@ -1,15 +1,20 @@
 random-cat
 ==========
 
-| random-cat is a amazing modul to get cat images. This Project won’t be
-| posible without the great Cat API (http://thecatapi.com).
+random-cat is a amazing modul to get cat images. This Project won't be
+posible without the great Cat API (http://thecatapi.com).
 
 Big Thanks to the great Cat API
 -------------------------------
 
 Go and visit http://thecatapi.com
 
-|alt text|
+.. figure:: http://thecatapi.com/api/images/get?type=gif
+   :alt: See? amazing!
+
+   alt text
+
+**Python 2 and 3 compatible**
 
 Installation
 ------------
@@ -81,5 +86,3 @@ Licence
 ~~~~~~~
 
 The MIT License (MIT)
-
-.. |alt text| image:: http://thecatapi.com/api/images/get?type=gif

@@ -2,9 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import os
+import sys
 from setuptools import setup, find_packages
+import cat
 
-version = '1.0.0'
+
+if sys.version_info < (2, 6):
+    raise NotImplementedError("Sorry, you need at least Python 2.6 or Python 3.2+ to use random-cat.")
+
 
 description = "Modul/Command Line Tool to get cat images"
 cur_dir = os.path.dirname(__file__)
@@ -16,14 +21,14 @@ except:
 
 setup(
     name = "random-cat",
-    version = version,
+    version = cat.__version__,
     url = 'https://github.com/gravmatt/random-cat',
     license = 'MIT',
     description = description,
     long_description = long_description,
     author = 'René Tanczos',
     author_email = 'gravmatt@gmail.com',
-    keywords = 'cat kitten hacking hack fun',
+    keywords = 'cat kitten fun',
     packages = find_packages(),
     entry_points="""
     [console_scripts]
@@ -32,6 +37,7 @@ setup(
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
+        'Topic :: Terminals',
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
@@ -41,5 +47,10 @@ setup(
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
         'Topic :: Artistic Software',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3'
     ]
 )
